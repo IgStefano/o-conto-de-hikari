@@ -7,3 +7,42 @@
   font-family: Nugo Sans;
   src: url("../Fonts/nugo-sans-font/NugoSansLight-9YzoK.ttf");
 }
+
+h1 {
+  font-family: "Harukaze", "Courier New", Courier, monospace;
+}
+
+body {
+  font-family: "Nugo Sans", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+}
+
+.header h1 {
+  font-size: 6.5rem;
+}
+
+.header div,
+p {
+  font-size: 0.9rem;
+}
+
+.main-text {
+  font-size: 1.2rem;
+}
+
+.footer button {
+  font-size: 0.5rem;
+}
+
+.fade-in {
+  animation: fadeIn ease-in 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

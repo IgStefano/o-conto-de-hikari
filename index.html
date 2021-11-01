@@ -7,12 +7,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       type="text/css"
       media="screen"
       href="./Assets/Styles/style.css"
     />
   </head>
   <body>
+    <!-- Parte superior do site, contendo atributos e etc -->
+    <section>
+      <header>
+        <div id="menu-header" class="header d-none">
+          <h1 class="d-flex justify-content-center align-items-center mt-3 fade-in">
+            光
+          </h1>
+          <h1 class="d-flex justify-content-center align-items-center fade-in">
+            O Conto de Hikari
+          </h1>
+        </div>
+        <nav id="status-header" class="container">
+          <!-- Precisa conter a situação atual à esquerda e a situação dos atributos à direita -->
+          <div class="row mt-2">
+            <div class="col-4 d-flex justify-content-baseline">
+              <p>Ato <span id="current-act">x</span></p>
+            </div>
+            <div id="ingame-kanji" class="col-4 d-flex justify-content-center">
+              <strong> 光</strong>
+            </div>
+            <div class="col-4 d-flex justify-content-end">
+              <p class="pb-0 mb-0">Moral: <span id="moral">0</span></p>
+            </div>
+          </div>
+          <div class="row pt-0 mt-0">
+            <div class="col-6 d-flex justify-content-baseline">
+              <p>Local: <span id="place"> x</span></p>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+              <p>Sorte: <span id="luck">0</span></p>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <!-- Corpo do site, contendo o texto da página atual e as escolhas possíveis abaixo. -->
+    <section id="text-choices">
+      <div>
+        <div class="main-text mx-3" id="text">Texto</div>
+        <div>
+          <div id="choices"
+            class="
+              btn-group btn-group-toggle
+              d-flex
+              flex-row
+              align-items-center
+              mb-4
+            "
+            data-toggle="buttons"
+          >
+            <label class="btn btn-secondary" id="label-1">
+              <input
+                type="radio"
+                name="choice"
+                id="choice-1"
+                autocomplete="off"
+              />
+              1
+            </label>
+            <label class="btn btn-secondary" id="label-2">
+              <input
+                type="radio"
+                name="choice"
+                id="choice-2"
+                autocomplete="off"
+              />
+              2
+            </label>
+            <label class="btn btn-secondary" id="label-3">
+              <input
+                type="radio"
+                name="choice"
+                id="choice-3"
+                autocomplete="off"
+              />
+              3
+            </label>
+            <label class="btn btn-secondary" id="label-4">
+              <input
+                type="radio"
+                name="choice"
+                id="choice-4"
+                autocomplete="off"
+              />
+              4
+            </label>
+          </div>
+
+          <!-- <div class="d-flex flex-row align-items-center">
+            <input type="radio" id="choice-1" name="choice" />
+            <label for="1" id="label-1">1</label>
+          </div>
+          <div class="d-flex flex-row align-items-center">
+            <input type="radio" id="choice-2" name="choice" />
+            <label for="2" id="label-2">2</label>
+          </div>
+          <div class="d-flex flex-row align-items-center">
+            <input type="radio" id="choice-3" name="choice" />
+            <label for="3" id="label-3">3</label>
+          </div>
+          <div class="d-flex flex-row align-items-center">
+            <input type="radio" id="choice-4" name="choice" />
+            <label for="4" id="label-4">4</label> -->
+          </div>
+        </div>
+      </div>
+      <div id="continue">
+      <label  class="d-flex justify-content-center mb-4 d-none">
+      <button type="button" class="btn btn-primary ml-2 w-100">Continuar</button>
+    </div>
+    </label>
+    </section>
+
+    <!-- Rodapé com opções de ler novamente o Disclaimer e as instruções do jogo. -->
+    <section>
+      <footer>
+        <div id="footer-buttons" class="footer d-flex justify-content-end">
+          <button type="button" class="btn btn-dark ml-2">Disclaimer</button>
+          <button type="button" class="btn btn-dark mx-1">Como Jogar</button>
+        </div>
+      </footer>
+    </section>
     <script src="./Assets/Scripts/game.js"></script>
+    <script src="./Assets/Scripts/pages.js"></script>
   </body>
 </html>
