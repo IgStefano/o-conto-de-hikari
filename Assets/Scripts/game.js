@@ -4,16 +4,16 @@ window.onload = function () {
   const choicesElement = document.getElementById("choices");
   const howToPlayElement = document.getElementById("how-to-play");
   const disclaimerElement = document.getElementById("disclaimer");
+  const backElement = document.getElementById("back");
 
   // Atributos do personagem & Status
   let moralElement = document.getElementById("moral");
-  moralElement.innerText = 0;
+
   let luckElement = document.getElementById("luck");
-  luckElement.innerText = 1;
+
   let placeElement = document.getElementById("place");
-  placeElement.innerText = "?";
+
   let actElement = document.getElementById("current-act");
-  actElement.innerText = "I";
 
   // Atributos da lógica do jogo
   let isDeadly;
@@ -22,6 +22,10 @@ window.onload = function () {
   //   Para inicar o jogo
   function startGame() {
     showCurrentPage(1);
+    moralElement.innerText = 0;
+    luckElement.innerText = 1;
+    placeElement.innerText = "?";
+    actElement.innerText = "I";
   }
 
   // Para que o jogo saiba em que página o jogador se encontra
@@ -44,7 +48,7 @@ window.onload = function () {
     if (showPage.luck) {
       if (showPage.luck > 0) {
         luckAdd(showPage.luck);
-      } else if (showPage.luck < 0) {
+      } else if (showPage.luck < 0 && luckElement.innerText >= 0) {
         luckElement.innerText--;
       }
     }
@@ -55,6 +59,7 @@ window.onload = function () {
     }
 
     // Mostra as opções
+
     pages[index - 1].choices.forEach((currentChoice) => {
       const label = document.createElement("label");
       label.innerText = currentChoice.text;
@@ -75,38 +80,55 @@ window.onload = function () {
       document.getElementById("status-header").classList.remove("d-none");
       document.getElementById("status-header").classList.add("invisible");
       document.getElementById("continue").classList.remove("d-none");
+
+      // Acrescentando os botões da parte de baixo
       if (showPage.id > 3) {
         document.getElementById("footer-buttons").classList.remove("d-none");
+        document.getElementById("back").classList.add("d-none");
         document.getElementById("status-header").classList.remove("invisible");
+      }
+      if (showPage.id > pages.length - 4) {
+        document.getElementById("back").classList.remove("d-none");
       }
     }
 
     // Regendo os botões no fim da tela
-    function footerButtons(button) {
-      let currentId = pages[index - 1].id;
-      console.log(currentId);
-      if (button === "disclaimer") {
-        nextPageId = 1001;
-      } else if (button === "howToPlay") {
-        nextPageId = 1002;
-      }
-      showCurrentPage(nextPageId);
-    }
 
     disclaimerElement.addEventListener("click", () =>
       footerButtons("disclaimer")
     );
+
     howToPlayElement.addEventListener("click", () =>
       footerButtons("howToPlay")
     );
+
+    backElement.addEventListener("click", () => footerButtons("back"));
+
+    let currentId = pages[index - 1].id;
+    let savedId;
+    if (currentId < pages.length - 4) {
+      savedId = currentId + 1;
+    }
+    console.log(currentId);
+
+    function footerButtons(button) {
+      if (button === "disclaimer") {
+        nextPageId = pages.length - 2;
+      } else if (button === "howToPlay") {
+        nextPageId = pages.length - 1;
+      } else if (button === "back") {
+        nextPageId = savedId;
+      }
+      showCurrentPage(nextPageId);
+    }
   }
 
   // Checa se passou no teste de atributo (teste com requerimento 0 sempre passam)
   function checkStats(moralRequirement) {
     if (moralRequirement > 0) {
-      return moralElement >= moralRequirement;
+      return moralElement.innerText >= moralRequirement;
     } else if (moralRequirement < 0) {
-      return moralElement <= moralRequirement;
+      return moralElement.innerText <= moralRequirement;
     } else {
       return true;
     }
@@ -136,7 +158,7 @@ window.onload = function () {
 
   // Selecionando escolha
   function selectChoice(choice) {
-    // Checa se teste são necessários e se passou nos testes
+    // Checa se testes são necessários e se passou nos testes
     if (choice.test) {
       if (checkStats(choice.moralRequirement)) {
         nextPageId = choice.nextPage;
