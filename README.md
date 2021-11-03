@@ -2,7 +2,7 @@
 
 Jogo narrativo inspirado (bem) vagamente no Japão feudal. Desenvolvido ao longo de uma semana. Projeto 1 no curso de Web Development na Ironhack. Escrito em Português e pode ser jogado gratuitamente através do seu navegador. 
 
-Link: 
+Link: https://igstefano.github.io/o-conto-de-hikari/
 Apresentação: 
 
 # Desenvolvimento
@@ -11,7 +11,7 @@ Apresentação:
 
 ## Sobre o Jogo
 
-*O Conto de Hikari* é um jogo de ficção interativa no qual o jogador controla Hikari, um jovem guerreiro na turbulenta terra de Oyama, que precisa usar sua força ou sua astúcia para passar por diversos desafios. 
+*O Conto de Hikari* é um jogo de ficção interativa no qual o jogador controla Hikari, um jovem guerreiro na turbulenta terra de Oyama, que precisa usar sua força ou sua astúcia para passar por diversos desafios. Atualmente, apenas o Ato I (primeira parte da história) está disponível para jogar.
 
 ## Como jogar
 
