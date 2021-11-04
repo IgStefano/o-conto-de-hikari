@@ -53,7 +53,9 @@ const pages = [
 1) Clique em "Começar" para iniciar o jogo;
 2) Leia a história e clique em uma das opções para prosseguir;
 3) Repita o passo 2 até receber uma das telas de "Fim de Jogo";
-4) Caso queira ver o que aconteceria se escolhesse diferente em algum ponto ou só gostaria de ver mais finais, clique em "Jogar novamente" e repita os passos de 1 a 3!`,
+4) Caso queira ver o que aconteceria se escolhesse diferente em algum ponto ou só gostaria de ver mais finais, clique em "Jogar novamente" e repita os passos de 1 a 3!
+
+Você pode apertar nos botões que estarão no canto da tela para ler o Disclaimer ou a estas instruções novamente. Também pode clicar no "kanji" no centro-superior para ativar ou desativar o Modo Escuro.`,
     choices: [
       {
         text: "Seguir",
@@ -224,7 +226,7 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
     id: 15,
     text: `Você aproveita o momento da refeição para refletir sobre o lugar onde está. Nos últimos dias, você não tem tido muito tempo para pensar. O treinamento é realmente duro e intenso e você não se vê com tempo para respirar. Minamoto Dojo é um lugar renomado como o seu mestre, mas realmente parece ter decaído com o tempo. Percebe-se pela estrutura que já abrigou muitos alunos, bem mais do que hoje em dia. Equipamentos de treino quebram com regularidade e nunca são repostos, a comida perde em variedade a cada mês que se passa.
     
-    Ainda assim, relances de uma época dourada podemser percebidos. Minamoto exibe com orgulho em sua sala o conjunto de chá que ganhou de presente do próprio Imperador. Além disso, correm boatos entre os pupilos que ele possui um arsenal secreto em algum lugar do Dojo com todos os tipos de armas valiosas. Você não consegue deixar de pensar que se ele se desfizesse de todas essas relíquias, esse lugar poderia voltar à sua era de Ouro.`,
+    Ainda assim, relances de uma época dourada podem ser percebidos. Minamoto exibe com orgulho em sua sala o conjunto de chá que ganhou de presente do próprio Imperador. Além disso, correm boatos entre os pupilos que ele possui um arsenal secreto em algum lugar do Dojo com todos os tipos de armas valiosas. Você não consegue deixar de pensar que se ele se desfizesse de todas essas relíquias, esse lugar poderia voltar à sua era de Ouro.`,
     choices: [
       {
         text: "O que será desse Dojo daqui a algum tempo?",
@@ -451,7 +453,7 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
         nextPage: 29,
       },
       {
-        text: "Este é o momento! Vou dar um único ataque certeiro para acabar com a luta.",
+        text: "Este é o momento! Vou aproveitar essa abertura para atacá-la na empunhadura e desarmá-la.",
         nextPage: 27,
       },
     ],
@@ -563,9 +565,9 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
 
   {
     id: 34,
-    text: `Conforme os anos passam, você e seus colegas se desenvolvem. Não apenas em combate, como  O que te preocupa é ver que não entram novos alunos no Dojo há bastante tempo. Um a um, seus colegas mais antigos se graduam e a sua vez não parece estar longe.
+    text: `Conforme os anos passam, você e seus colegas se desenvolvem. Não apenas em combate, como em outras artes apreciadas pela elite de Oyama: a escrita, a leitura e a cerimônia do chá. O que te preocupa é ver que não entram novos alunos no Dojo há bastante tempo. Um a um, seus colegas mais antigos se graduam e a sua vez não parece estar longe.
     
-    Todos os alunos passam pela tradição do Dojo de enfrentar o mestre em uma luta-treino como condição de se graduar. Não é uma luta até alguém desmaiar, mas ainda assim é visto como o teste mais intenso do treinamento. Quem aguentar o um-a-um com o Mestre dos Mil Estilos está certamente pronto para ser um guerreiro e defender um clã de Oyama.`,
+    Todos os alunos passam pela tradição do Dojo de enfrentar o mestre em uma luta-treino como condição de se graduar. Não é uma luta até o, mas ainda assim é visto como o teste mais intenso do treinamento. Quem aguentar o um-a-um com o Mestre dos Mil Estilos está certamente pronto para ser um guerreiro e defender um clã de Oyama.`,
     choices: [
       {
         text: "É a minha vez",
@@ -821,7 +823,7 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
 
   {
     id: 49,
-    text: `"Hmm, então é isso?" Minamoto resmunga enquanto observa a sua resposta. Ele rapidamente sabota o seu plano e você rapidamente se encontra no chão. Ele lhe diz: "Hikari, você é forte; é um guerreiro. Você só precisa de um pouco mais de autoconhecimento. Onde estão suas forças e fraquezas?Ser um guerreiro não se resume a ser forte, habilidoso ou a somente saber lutar. Todo bom guerreiro é alguém que se conhece profundamente. Lembre-se disso.`,
+    text: `"Hmm, então é isso?" Minamoto resmunga enquanto observa a sua resposta. Ele rapidamente sabota o seu plano e você rapidamente se encontra no chão. Ele lhe diz: "Hikari, você é forte; é um guerreiro. Você só precisa de um pouco mais de autoconhecimento. Onde estão suas forças e fraquezas? Ser um guerreiro não se resume a ser forte, habilidoso ou a somente saber lutar. Todo bom guerreiro é alguém que se conhece profundamente. Lembre-se disso.`,
     choices: [
       {
         text: "Curvar-se e agradecer pelos ensinamentos",
@@ -941,7 +943,7 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
     choices: [
       {
         text: "Tanto faz, ela não veio por que não quis. Por você, a cerimônia deve seguir.",
-        nextPage: 64,
+        nextPage: 65,
       },
     ],
   },
@@ -1306,7 +1308,7 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
 
   {
     id: 79,
-    text: `A confusão toma conta do ambiente. Como poderia Adachi fazer isso? Ele que esteve com vocês desde o início do seu treinamento, sempre sendo o fiel ajudando de Minamoto... Que razão ele poderia ter para causar tanto estrago?!
+    text: `A confusão toma conta do ambiente. Como poderia Adachi fazer isso? Ele que esteve com vocês desde o início do seu treinamento, sempre sendo o fiel ajudante de Minamoto... Que razão ele poderia ter para causar tanto estrago?!
     
     Como quem admite o próprio crime, Adachi sai do Dojo, caminha lentamente até o mestre e se prostra diante dele.
     
@@ -1442,6 +1444,8 @@ O básico de como jogar O Conto de Hikari é extremamente simples!
 2) Leia a história e clique em uma das opções para prosseguir;
 3) Repita o passo 2 até receber uma das telas de "Fim de Jogo";
 4) Caso queira ver o que aconteceria se escolhesse diferente em algum ponto ou só gostaria de ver mais finais, clique em "Jogar novamente" e repita os passos de 1 a 3!
+
+Você pode apertar nos botões que estarão no canto da tela para ler o Disclaimer ou a estas instruções novamente. Também pode clicar no "kanji" no centro-superior para ativar ou desativar o Modo Escuro.
 
 Moral & Pontos de Sorte:
   

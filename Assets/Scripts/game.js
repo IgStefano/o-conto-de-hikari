@@ -5,6 +5,40 @@ window.onload = function () {
   const howToPlayElement = document.getElementById("how-to-play");
   const disclaimerElement = document.getElementById("disclaimer");
   const backElement = document.getElementById("back");
+  const bodyElement = document.getElementById("body");
+
+  // Regendo o modo escuro
+  const darkModeElement = document.getElementById("dark-mode");
+  const darkModeMenuElement = document.getElementById("dark-mode-menu");
+  let darkModeToggle = false;
+
+  // Adiciona um modo escuro ao jogo, clicando no kanji de Hikari
+  darkModeElement.addEventListener("mousedown", () => darkMode());
+  darkModeMenuElement.addEventListener("mousedown", () => darkMode());
+
+  function darkMode() {
+    darkModeToggle = !darkModeToggle;
+    if (darkModeToggle === true) {
+      disclaimerElement.classList.remove("btn-dark");
+      howToPlayElement.classList.remove("btn-dark");
+      backElement.classList.remove("btn-dark");
+      disclaimerElement.classList.add("btn-light");
+      howToPlayElement.classList.add("btn-light");
+      backElement.classList.add("btn-light");
+      bodyElement.classList.add("bg-dark");
+      bodyElement.classList.add("text-light");
+    } else {
+      disclaimerElement.classList.add("btn-dark");
+      howToPlayElement.classList.add("btn-dark");
+      backElement.classList.add("btn-dark");
+      disclaimerElement.classList.remove("btn-light");
+      howToPlayElement.classList.remove("btn-light");
+      backElement.classList.remove("btn-light");
+
+      bodyElement.classList.remove("bg-dark");
+      bodyElement.classList.remove("text-light");
+    }
+  }
 
   // Atributos do personagem & Status
   let moralElement = document.getElementById("moral");
@@ -16,7 +50,7 @@ window.onload = function () {
   let actElement = document.getElementById("current-act");
 
   // Atributos da lógica do jogo
-  let isDeadly;
+  // let isDeadly;
   let nextPageId;
 
   //   Para inicar o jogo
@@ -32,8 +66,13 @@ window.onload = function () {
   function showCurrentPage(index) {
     const showPage = pages.find((currentPage) => currentPage.id === index - 1);
 
+    // // Torna a variável index global
+    // globalThis.globalIndex = index;
+    // console.log(globalThis.globalIndex);
+
     // Mostra o texto
     textElement.innerText = showPage.text;
+    console.log(showPage);
 
     // Atualiza os valores de status
     if (showPage.place) {
@@ -65,7 +104,7 @@ window.onload = function () {
       label.innerText = currentChoice.text;
       label.classList.add("btn-secondary");
       label.classList.add("btn");
-      label.addEventListener("click", () => selectChoice(currentChoice));
+      label.addEventListener("mousedown", () => selectChoice(currentChoice));
       choicesElement.appendChild(label);
     });
 
@@ -91,37 +130,36 @@ window.onload = function () {
         document.getElementById("back").classList.remove("d-none");
       }
     }
-
-    // Regendo os botões no fim da tela
-
-    disclaimerElement.addEventListener("click", () =>
-      footerButtons("disclaimer")
-    );
-
-    howToPlayElement.addEventListener("click", () =>
-      footerButtons("howToPlay")
-    );
-
-    backElement.addEventListener("click", () => footerButtons("back"));
-
-    let currentId = pages[index - 1].id;
-    let savedId;
-    if (currentId < pages.length - 4) {
-      savedId = currentId + 1;
-    }
-    console.log(currentId);
-
-    function footerButtons(button) {
-      if (button === "disclaimer") {
-        nextPageId = pages.length - 2;
-      } else if (button === "howToPlay") {
-        nextPageId = pages.length - 1;
-      } else if (button === "back") {
-        nextPageId = savedId;
-      }
-      showCurrentPage(nextPageId);
-    }
   }
+
+  // Regendo os botões no fim da tela
+
+  // let currentId = pages[index - 1].id;
+  // let savedId;
+  // if (currentId < pages.length - 4) {
+  //   savedId = currentId + 1;
+  // }
+
+  function footerButtons(button) {
+    if (button === "disclaimer") {
+      nextPageId = pages.length - 2;
+    } else if (button === "howToPlay") {
+      nextPageId = pages.length - 1;
+    } else if (button === "back") {
+      nextPageId = savedId;
+    }
+    showCurrentPage(nextPageId);
+  }
+
+  disclaimerElement.addEventListener("mousedown", () =>
+    footerButtons("disclaimer")
+  );
+
+  howToPlayElement.addEventListener("mousedown", () =>
+    footerButtons("howToPlay")
+  );
+
+  backElement.addEventListener("mousedown", () => footerButtons("back"));
 
   // Checa se passou no teste de atributo (teste com requerimento 0 sempre passam)
   function checkStats(moralRequirement) {
@@ -151,10 +189,10 @@ window.onload = function () {
     }
   }
 
-  // Checa se uma decisão errada causou fim de jogo
-  function checkDead() {
-    return luckElement.innerText === 0 && isDeadly === true;
-  }
+  // // Checa se uma decisão errada causou fim de jogo
+  // function checkDead() {
+  //   return luckElement.innerText === 0 && isDeadly === true;
+  // }
 
   // Selecionando escolha
   function selectChoice(choice) {
