@@ -6,6 +6,7 @@ window.onload = function () {
   const disclaimerElement = document.getElementById("disclaimer");
   const backElement = document.getElementById("back");
   const bodyElement = document.getElementById("body");
+  let savedId;
 
   // Regendo o modo escuro
   const darkModeElement = document.getElementById("dark-mode");
@@ -130,15 +131,15 @@ window.onload = function () {
         document.getElementById("back").classList.remove("d-none");
       }
     }
+
+    let currentId = pages[index - 1].id;
+
+    if (currentId < pages.length - 4) {
+      savedId = currentId + 1;
+    }
   }
 
   // Regendo os botões no fim da tela
-
-  // let currentId = pages[index - 1].id;
-  // let savedId;
-  // if (currentId < pages.length - 4) {
-  //   savedId = currentId + 1;
-  // }
 
   function footerButtons(button) {
     if (button === "disclaimer") {
