@@ -152,10 +152,12 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
       {
         text: "Ele viu que penso rápido e sou capaz de vencer pupilos mais fortes que eu usando a minha inteligência.",
         nextPage: 10,
+        moral: -1,
       },
       {
         text: "Ele viu a forma que eu dizimo os meus colegas. Mesmo que eu esteja em desvantagem numérica, eles tremem diante de mim.",
         nextPage: 11,
+        moral: 1,
       },
     ],
     place: "Minamoto Dojo",
@@ -163,7 +165,7 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
 
   {
     id: 10,
-    moral: -1,
+
     text: `A astúcia muitas vezes vence a cega força bruta. Lutar com agilidade e sagacidade é a sua marca registrada e você se destaca bastante por isso. Certamente, você não é o pupilo mais forte, mas ainda assim seria o principal, se não fosse por um detalhe...`,
     choices: [
       {
@@ -175,7 +177,6 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
 
   {
     id: 11,
-    moral: 1,
     text: `Ninguém fica no seu caminho se tiver vontade de viver. Esmagar seus inimigos em batalha para você é tão natural quanto respirar. Você pode não ser o mais estratégico de todos, mas não é qualquer um que tem coragem de te encarar. De fato, você só consegue pensar em uma pessoa...`,
     choices: [
       {
@@ -250,17 +251,18 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
       {
         text: "Vou usar o caminho mais curto. Nada pode me parar, nem mesmo a mãe natureza.",
         nextPage: 17,
+        moral: 1,
       },
       {
         text: "Procurar um caminho mais seguro é a melhor maneira de me manter vivo. O que importa é completar a missão.",
         nextPage: 18,
+        moral: -1,
       },
     ],
   },
 
   {
     id: 17,
-    moral: 1,
     text: `Você enfrenta todo tipo de fauna para chegar ao seu objetivo. Sem problemas, você pega a espada cerimonial e retorna. Talvez com uma ou duas cicatrizes a mais, mas isso faz parte.`,
     choices: [
       {
@@ -273,7 +275,7 @@ Além disso, em vez dos tradicionais "hit points", "HP" ou "vida", neste jogo Hi
 
   {
     id: 18,
-    moral: -1,
+
     text: `Astúcia por vezes pode ser confundida com covardia, mas com certeza não é o caso. Você é capaz de evitar os perigos do bosque e trazer a espada de volta. Isso te leva mais tempo, mas nada que te abata muito.`,
     choices: [
       {

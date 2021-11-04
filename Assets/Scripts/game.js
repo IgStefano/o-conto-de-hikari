@@ -67,13 +67,8 @@ window.onload = function () {
   function showCurrentPage(index) {
     const showPage = pages.find((currentPage) => currentPage.id === index - 1);
 
-    // // Torna a variável index global
-    // globalThis.globalIndex = index;
-    // console.log(globalThis.globalIndex);
-
     // Mostra o texto
     textElement.innerText = showPage.text;
-    console.log(showPage);
 
     // Atualiza os valores de status
     if (showPage.place) {
@@ -81,9 +76,6 @@ window.onload = function () {
     }
     if (showPage.act) {
       actElement.innerText = showPage.act;
-    }
-    if (showPage.moral) {
-      moralChange(showPage.moral);
     }
     if (showPage.luck) {
       if (showPage.luck > 0) {
@@ -183,9 +175,17 @@ window.onload = function () {
 
   // Modifica o valor da moral
   function moralChange(value) {
-    if (value > 0) {
+    if (
+      value > 0 &&
+      moralElement.innerText < 5 &&
+      moralElement.innerText >= 0
+    ) {
       moralElement.innerText++;
-    } else if (value < 0) {
+    } else if (
+      value < 0 &&
+      moralElement.innerText > -5 &&
+      moralElement.innerText <= 0
+    ) {
       moralElement.innerText--;
     }
   }
@@ -206,6 +206,9 @@ window.onload = function () {
       }
     } else {
       nextPageId = choice.nextPage;
+      if (choice.moral) {
+        moralChange(choice.moral);
+      }
     }
 
     // Reinício do jogo
