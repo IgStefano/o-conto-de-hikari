@@ -3,11 +3,12 @@
 Jogo narrativo inspirado (bem) vagamente no Japão feudal. Desenvolvido ao longo de uma semana. Projeto 1 no curso de Web Development na Ironhack. Escrito em Português e pode ser jogado gratuitamente através do seu navegador. 
 
 Link: https://igstefano.github.io/o-conto-de-hikari/
-Apresentação: 
+
+Apresentação: https://prezi.com/view/goXpX3l5WVuAgelU8Ze1/
 
 # Desenvolvimento
 
-*O Conto de Hikari* foi desenvolvido em uma semana usando apenas HTML, CSS e JavaScript. 
+*O Conto de Hikari* foi desenvolvido em uma semana usando apenas HTML, CSS (com o framework Bootstrap) e JavaScript. 
 
 ## Sobre o Jogo
 
@@ -21,6 +22,8 @@ O básico de como jogar *O Conto de Hikari* é extremamente simples!
  2. Leia a história e escolha uma das opções para prosseguir;
  3. Repita o passo 2 até receber uma das telas de "Fim de Jogo";
  4. Caso queira ver o que aconteceria se escolhesse diferente em algum ponto ou só gostaria de ver mais finais, clique em "Jogar novamente" e repita os passos de 1 a 3!
+
+Você pode apertar nos botões que estarão no canto da tela para ler o Disclaimer ou a estas instruções dentro do jogo. Também pode clicar no "kanji" no centro-superior para ativar ou desativar o Modo Escuro.
 
 ### Moral & Pontos de Sorte
 Um aspecto diferente em *O Conto de Hikari* é o sistema de progressão incluso. Em primeiro lugar, há o sistema de "Moral". A Moral é uma barra de valor numérico cujo valor se estende de -5 a 5, e ela diz respeito ao estilo de combate empregado por Hikari.
