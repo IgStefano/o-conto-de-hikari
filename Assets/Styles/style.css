@@ -8,13 +8,28 @@
   src: url("../Fonts/nugo-sans-font/NugoSansLight-9YzoK.ttf");
 }
 
+@font-face {
+  font-family: Nuku-Nuku;
+  src: url("../Fonts/nuku-nuku/nuku1.ttf");
+}
+
+@font-face {
+  font-family: Catcafe;
+  src: url("../Fonts/catcafe/CatCafe.ttf");
+}
+
+@font-face {
+  font-family: Kaorigel;
+  src: url("../Fonts/kaorigel/Kaori Gel/KaoriGel.ttf");
+}
+
 h1 {
   font-family: "Harukaze", "Courier New", Courier, monospace;
 }
 
 body {
-  font-family: "Nugo Sans", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
+  font-family: Kaorigel, "Nugo Sans", Impact, Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
 }
 
 .header h1 {
@@ -23,15 +38,28 @@ body {
 
 .header div,
 p {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+  font-family: Nuku-Nuku;
+  font-weight: 300;
+}
+
+#dark-mode {
+  border-radius: 50px;
+  border: none;
+  font-size: 1.3rem;
+  /* box-shadow: inset 0 0 1em #cb8bf6, 0 0 1em grey; */
+  box-shadow: 2px 2px 9px #555;
 }
 
 .main-text {
   font-size: 1.2rem;
+  font-family: Kaorigel;
 }
 
 .footer button {
   font-size: 0.8rem;
+  box-shadow: 2px 2px 9px #555;
+  font-family: Catcafe;
 }
 
 .fade-in {
